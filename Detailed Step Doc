@@ -1,0 +1,122 @@
+## Detailed Summary for YouTube Data Analysis Project
+
+Understanding the trend in video advertisements and the use of on-premise data centers vs cloud computing.
+- Analyzing a particular dataset to identify trending videos and create targeted advertisements.
+- Explaining the difference between on-premise data centers and cloud computing.
+- Highlighting the benefits of using cloud computing over on-premise data centers.
+- Introduction to Amazon Web Services (AWS) as a leading cloud platform.
+- Cooming to the process of creating an AWS account and best practices for account security.
+
+Create an IM account with custom password and admin access in AWS console.
+- Generate the access key and secret key.
+- Download the access key credentials.
+- Set up AWS CLI using the access key credentials.
+- Configure AWS CLI with the access key, secret key, and region.
+- Verify the configuration by running a command in AWS CLI.
+
+Upload data to S3 bucket
+- Create an S3 bucket with specific naming convention
+- Enable server-side encryption for data protection
+- Upload data to S3 bucket using AWS CLI command
+
+Create folders in AWS S3 bucket and upload JSON files
+- Use AWS copy command to create folders and upload JSON files
+- One folder named 'youtube' inside the bucket, and inside 'youtube' create a folder named 'raw statistic reference data'
+- Execute the provided commands to copy data to AWS S3
+
+Create a role for Glue to access AWS S3 data
+- Click on the create role in the IAM console and search for Glue
+- Give the role the permission to access AWS S3
+- Also give the role access to related services such as EC2, S3, and CloudWatch
+- After creating the role, go to the Glue console and select the IAM role
+- Create a new database for storing raw data
+- Run the Glue crawler to build a catalog based on the JSON data in the S3 bucket
+- Query the data using AWS Athena, AWS's ad hoc query tool
+
+Create a lambda function to convert JSON data into column and row format
+- Provide the function name following the naming convention
+- Choose Python 3.8 as the runtime
+- Create an execution role for lambda to access data in S3
+
+Create a Lambda function to read files from an S3 bucket, process data using AWS Wrangler and Pandas, and save the clean data to another S3 bucket.
+- Create an AWS IAM role with full S3 access
+- Use the existing role in the Lambda function
+- Write the Python code using AWS Wrangler and Pandas
+- Store sensitive information in environment variables
+- Read files from the S3 bucket
+- Normalize and extract the desired data
+- Write the processed data to the output S3 bucket
+
+AWS Lambda is a serverless compute service that allows you to run code without managing servers.
+- Lambda functions run in a compute environment and may not have all the required packages.
+- Lambda layers can be used to provide the required packages and dependencies.
+- AWS Data Wrangler is one such package that can be added as a Lambda layer.
+- Timeout errors may occur if the Lambda function runs for more than 15 minutes.
+
+Learn to clean and transform data using AWS Glue and S3
+- Increase timeout duration in general configuration
+- Give permission to Lambda for accessing S3
+- Create a Glue catalog and table
+- Query transformed data using Athena
+- Automate data cleaning and conversion
+- Build a catalog and dashboard using Glue data
+
+Creating a crawler to understand and analyze data stored in AWS S3 buckets
+- The first part of the project involved downloading and uploading data onto an S3 bucket
+- A Blue Crawler was created to analyze the data and identify errors in the JSON files
+- AWS Lambda function was used to transform the data and store it in a cleaned version bucket
+- The next step is to work with the CSV file and build a crawler to understand and transform the data
+- Once the data is processed, the final product will be built based on the transformed data
+
+Query execution and data type casting
+- Executing a query that throws an error due to mismatched data types
+- Solving the error by casting the data type in the query
+- Selecting only the required columns in the query
+- Filtering data based on a specific condition
+- Understanding how to preprocess data and avoid casting within queries
+- Changing the data type in the AWS catalog to prevent casting during query execution
+
+Preprocessing and Efficiency for Querying
+- Use Glue ETL to process and transform raw data
+- Change data types to improve querying efficiency
+
+Writing data into the target bucket and creating partitions
+- The code imports the dynamic frame to work with the data
+- The code converts the data into a data frame
+- The code builds the final output and creates the dynamic data frame
+- The code adds a partition key to the data
+- The code filters out unwanted data using predicate push down
+
+Create a glue crawler to clean and catalog data
+- Glue job successfully executed and data output obtained
+- Create a glue crawler with the cleaned version of data
+- Add trigger to automatically run lambda code on new data upload
+
+Data processing pipeline created using AWS Glue Studio
+- Cleaned and uploaded data from local file to S3 bucket
+- Built reporting layer for analyzing the data
+
+Created an analytical pipeline using AWS Glue to transform and store data
+- Implemented SQL queries to select and transform data based on category ID
+- Stored transformed data in an analytical bucket in Amazon S3 using Parquet format
+- Created an analytical database in AWS Glue to catalog the transformed data
+- Monitored the job execution and verified the output in the analytical bucket
+- Previewed the final analytical table in Athena to confirm the successful pipeline execution
+
+Building reporting version of data makes it easier for data scientists to analyze and query the data.
+- Instead of running complex queries every day, the data can be combined into the ETL pipeline and a final table can be provided to the data scientist.
+- By using a single filter, such as 'where id is equal to two', the data scientist can easily query and analyze the data.
+- Visualization of the data can be done using Amazon QuickSight, a BI management tool.
+- To use QuickSight, you need to set up an account and give permission to access your data.
+- After setting up the account, you can import data from Athena to QuickSight and start visualizing the data.
+- Create a data set in QuickSight and use it to build dashboards with different visualizations.
+- For example, you can create a bar chart to visualize the total number of likes in the data.
+
+Create a dashboard to visualize data from YouTube
+- Different videos can be liked based on different categories like entertainment and music
+- Analyzing views by category reveals that music is the highest viewed category
+- Visualize data based on regions to see which regions have the most views
+- Use your creativity to customize the visualizations and build the final dashboard
+- Export and share the dashboard with others
+- The project involves data processing, ETL, and visualization using technologies like Kinesis, Lambda, Glue, and QuickSight
+
