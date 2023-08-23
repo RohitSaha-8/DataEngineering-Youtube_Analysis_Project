@@ -27,7 +27,7 @@ https://www.kaggle.com/datasets/datasnaek/youtube-new
 ## Architecture Diagram
 <img src="architecture.jpeg">
 
-Executing end-to-end data engineering project to build a dashboard using AWS cloud
+Overall steps for executing end-to-end project to build a dashboard using AWS cloud :
 - Learn how to build a data lake from scratch using Amazon S3
 - Understand the difference between data lake and data warehouse
 - Design data lake and build a data pipeline around it
