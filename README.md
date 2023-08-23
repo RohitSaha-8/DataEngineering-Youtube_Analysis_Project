@@ -27,7 +27,11 @@ https://www.kaggle.com/datasets/datasnaek/youtube-new
 ## Architecture Diagram
 <img src="architecture.jpeg">
 
-## Complete Tutorial
-I have created a detailed 3+ hour tutorial on this project, where you will execute everything from start to end
-
-https://youtu.be/yZKJFKu49Dk
+Executing end-to-end data engineering project to build a dashboard using AWS cloud
+- Learn how to build a data lake from scratch using Amazon S3
+- Understand the difference between data lake and data warehouse
+- Design data lake and build a data pipeline around it
+- Utilize AWS services such as SNS and IAM
+- Write SQL queries to analyze data using Amazon Athena
+- Ingest data incrementally and build a proper schema
+- Visualize data using a dashboard
