@@ -13,12 +13,12 @@ This project aims to securely manage, streamline, and perform analysis on the st
 7. Visualize data using a dashboard
 
 ## Services we will be using
-1. Amazon S3: Amazon S3 is an object storage service that provides manufacturing scalability, data availability, security, and performance.
-2. AWS IAM: This is nothing but identity and access management which enables us to manage access to AWS services and resources securely.
+1. Amazon S3: When it comes to handling large-scale storage needs while maintaining data availability, security, and performance, Amazon S3 shines. It's the ideal choice for establishing a robust storage foundation.
+2. AWS IAM: For secure access management to AWS services and resources, AWS IAM steps up. Use it to control permissions, ensuring data integrity and confidential handling throughout your project.
 3. QuickSight: Amazon QuickSight is a scalable, serverless, embeddable, machine learning-powered business intelligence (BI) service built for the cloud.
-4. AWS Glue: A serverless data integration service that makes it easy to discover, prepare, and combine data for analytics, machine learning, and application development.
-5. AWS Lambda: Lambda is a computing service that allows programmers to run code without creating or managing servers.
-6. AWS Athena: Athena is an interactive query service for S3 in which there is no need to load data it stays in S3.
+4. AWS Glue: Simplify data integration and preparation with AWS Glue. When you need to organize and combine data for analytics, ML, or app development, Glue's serverless approach streamlines the process.
+5. AWS Lambda: If you want to automate tasks without worrying about server management, AWS Lambda is the solution. It's perfect for triggering actions based on events, boosting workflow efficiency.
+6. AWS Athena: When real-time querying of data without the need for data loading is on the agenda, turn to AWS Athena. It's your tool for direct querying of data residing in Amazon S3, minimizing data movement.
 
 ## Dataset Used
 The Kaggle dataset provides a comprehensive collection of daily statistics on popular YouTube videos over an extended period of time. Each region has its own file, containing up to 200 trending videos published every day. The data includes information such as video title, channel title, publication time, tags, views, likes and dislikes, description, and comment count. Additionally, a category_id field is included in the JSON file linked to the region, which varies by area. The data is presented in CSV format for easy analysis and manipulation.
